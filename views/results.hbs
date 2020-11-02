@@ -1,0 +1,29 @@
+<h2>Search results</h2>
+{{#if hasResults}}
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>App ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Rating</th>
+                <th>Installs</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each recs}}
+                <tr>
+                    <td>{{ this.app_id }}</td>
+                    <td>{{ this.name }}</td>
+                    <td>{{ this.category }}</td>
+                    <td>{{ this.rating }}</td>
+                    <td>{{ this.installs }}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{else}}
+<h3>Your search return no result</h3>
+{{/if}}
